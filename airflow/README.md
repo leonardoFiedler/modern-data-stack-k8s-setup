@@ -31,6 +31,10 @@ helm repo update
 
 4. Install Airflow through KinD/Helm
 
+- 4.0. Ir para pasta do Airflow
+
+`cd airflow`
+
 - 4.1. Criacao do Cluster
 
 `kind create cluster --config kind-cluster.yaml`
@@ -68,9 +72,11 @@ kubectl wait --namespace ingress-nginx \
 - 4.6. Obtendo valores default do Airflow via Helm e aplicando
 
 - 4.6.1. Necessario rodar somente na primeira vez
+
 ```
-helm show values apache-airflow/airflow > helm/default_values.yaml
+helm show values apache-airflow/airflow > helm/values.yaml
 ```
+
 - 4.6.2. Aplicando e subindo tudo
 
 ```
