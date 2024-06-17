@@ -1,10 +1,13 @@
-# Comandos uteis do Kubectl
+# Kubectl Utils Commands
 
+#### 1. Listing Pods status
 
-- 1. Listagem situação dos Pods
+``` 
+kubectl get pods -n airflow
+```
 
-`kubectl get pods -n airflow`
+#### 2. Extract logs from a Pod
 
-- 2. Obter os logs de um Pod
-
-`kubectl logs --namespace airflow -f airflow-postgresql-0`
+```
+kubectl logs --namespace airflow -f airflow-postgresql-0
+```
